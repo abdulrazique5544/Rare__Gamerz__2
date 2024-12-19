@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Gamerz 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1d;
+            color: #ffffff;
+        }
+        header {
+            background: linear-gradient(-45deg, #282828, #1a1a1d, #66fcf1, #ff0000);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #66fcf1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .games-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .game-card {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .game-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #66fcf1;
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .game-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+        }
+        .game-description {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #282828;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .youtube-link {
+            margin-top: 20px;
+        }
+        .youtube-link a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .youtube-link a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if ("Notification" in window) {
+                if (Notification.permission === "default") {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === "granted") {
+                            new Notification("Thank you for enabling notifications! Stay updated with Rare Gamerz 2.");
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/50" alt="Rare Gamerz 2 Logo">
+        <h1>Rare Gamerz 2</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#channel">Channel</a>
+            <a href="#games">Games</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Rare Gamerz 2, your ultimate destination for gaming enthusiasts! Explore the latest games, tips, and more.</p>
+        </section>
+
+        <section id="channel">
+            <h2>About Rare Gamerz 2 Channel</h2>
+            <p>Rare Gamerz 2 is a gaming-focused YouTube channel dedicated to providing engaging content for gaming fans. From action-packed gameplay videos to tutorials and live streams, we cover popular games like Free Fire, Minecraft, and PUBG. Our goal is to entertain, educate, and connect with the gaming community worldwide.</p>
+            <p>Subscribe to our channel to stay updated with the latest gaming trends, tips, and tricks. Join the Rare Gamerz 2 family today!</p>
+            <div class="youtube-link">
+                <a href="https://www.youtube.com/@Rare_gamerz_2" target="_blank">Visit Rare Gamerz 2 YouTube Channel</a>
+            </div>
+        </section>
+
+        <section id="games">
+            <h2>Our Games</h2>
+            <div class="games-section">
+                <div class="game-card">
+                    <img src="images/free_fire_logo.png" alt="Free Fire">
+                    <h3>Free Fire</h3>
+                    <p class="game-description">Free Fire is a fast-paced battle royale game where players compete to be the last one standing on a remote island. It offers intense action, strategic gameplay, and exciting character customization.</p>
+                </div>
+                <div class="game-card">
+                    <img src="images/minecraft_logo.png" alt="Minecraft">
+                    <h3>Minecraft</h3>
+                    <p class="game-description">Minecraft is a sandbox game that allows players to explore, build, and create in a blocky, pixelated world. With survival and creative modes, it offers endless possibilities for adventure and creativity.</p>
+                </div>
+                <div class="game-card">
+                    <img src="images/pubg_logo.png" alt="PUBG">
+                    <h3>PUBG</h3>
+                    <p class="game-description">PUBG (PlayerUnknown's Battlegrounds) is a battle royale game known for its realistic graphics and immersive gameplay. Players scavenge for weapons and gear while competing to be the last survivor on a vast map.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us at <a href="mailto:contact@raregamerz2.com" style="color:#66fcf1;">contact@raregamerz2.com</a>.</p>
+            <div class="youtube-link">
+                <p>Check out our YouTube channel for more gaming content:</p>
+                <a href="https://www.youtube.com/@Rare_gamerz_2" target="_blank">Rare Gamerz 2 YouTube Channel</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rare Gamerz 2. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
